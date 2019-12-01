@@ -19,9 +19,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nullable, nonatomic, copy) NSString *link;
 @property (nullable, nonatomic, copy) NSString *itemDescription;
 @property (nullable, nonatomic, copy) NSString *guid;
-@property (nullable, nonatomic, copy) NSString *categoties;
 @property (nullable, nonatomic, copy) NSString *imageUrl;
-@property (nullable, nonatomic, copy) NSString *pubDate;
+@property (nullable, nonatomic, copy) NSDate *pubDate;
 
 @end
 

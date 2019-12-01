@@ -9,7 +9,7 @@
 #import "NewsDetailViewController.h"
 #import "RSSParser-Swift.h"
 
-@interface NewsDetailViewController ()
+@interface NewsDetailViewController () <RSSItemsDetailViewInput>
 
 @end
 
@@ -32,15 +32,15 @@
 }
 
 - (void) tapOnWebView {
-    [_output didTapedOnOpenWebSite:[[NSURL alloc] initWithString:@""]];
+//    [_output didTapedOnOpenWebSite:@""];
 }
 
 
 
 #pragma mark - RSSItemsDetailViewInput
 
-- (void)prepareWith:(NSArray<id> * _Nonnull)placesContent {
-    //TODO: build table!
+- (void) prepareWith:(id)placesContent {
+    
 }
 
 

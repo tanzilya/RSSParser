@@ -27,17 +27,16 @@ private class ItemsDetailConfigurator: NSObject {
     }
     
     private func configure(viewController: NewsDetailViewController) {
-//        let router = ItemsListRouter()
-//        
-//        let presenter = ItemsListPresenter()
-//        presenter.view = viewController as? ItemsListViewInput
-//        presenter.router = router
-//        
-//        let interactor = ItemsListInteractor()
-//        interactor.output = presenter
-//        //TODO: add services (fetching and saving data). User abstraction!
-//        
-//        presenter.interactor = interactor
-//        viewController.output = presenter
+        let router = ItemsDetailRouter()
+        
+        let presenter = ItemsDetailPresenter()
+        presenter.view = viewController as? ItemsDetailViewInput
+        presenter.router = router
+        
+        let interactor = ItemsDetailInteractor()
+        interactor.output = presenter
+        
+        presenter.interactor = interactor
+        viewController.output = presenter
     }
 }

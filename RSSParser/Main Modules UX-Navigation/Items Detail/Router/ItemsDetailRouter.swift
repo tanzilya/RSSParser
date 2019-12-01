@@ -8,6 +8,10 @@
 
 import UIKit
 
-class ItemsDetailRouter: NSObject {
+class ItemsDetailRouter: ItemsDetailRouterInput {
+    func didTapedOnOpenWebSite(url: String) {
+        let appLink = AppLink()
+        appLink.openLink(url: url)
+    }
 
 }

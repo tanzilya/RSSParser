@@ -12,5 +12,6 @@ import AlamofireRSSParser
 protocol NewsAPIProtocols {
     func getNews(url: URL, completion: @escaping (RSSFeed?) -> Void)
     func saveRSSToDB(rss: RSSFeed, completion: @escaping ([RSSItemEntity]) -> Void)
-    
+    func fetchRSSItems() -> [RSSItemEntity]
+    func fetchRecordsAndGetGUID(index: Int) -> String
 }

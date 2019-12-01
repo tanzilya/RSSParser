@@ -18,7 +18,6 @@
 @dynamic link;
 @dynamic itemDescription;
 @dynamic guid;
-@dynamic categoties;
 @dynamic imageUrl;
 @dynamic pubDate;
 

@@ -8,6 +8,15 @@
 
 import UIKit
 
-class ItemsDetailInteractor: NSObject {
 
+class ItemsDetailInteractor {
+//MARK: - Class Variables
+    weak var output: ItemsDetailInteractorOutput!
+//    var apiWorker: NewsWorker = NewsWorker(newsApi: NewsAPI())
+}
+
+//MARK: - *** ItemsDetailInteractorInput ***
+
+extension ItemsDetailInteractor: ItemsDetailInteractorInput {
+   
 }

@@ -9,5 +9,5 @@
 import Foundation
 
 protocol ItemsListRouterInput {
-    func openRSSDetails(_ id: Int32)
+    func openRSSDetails(_ id: String)
 }

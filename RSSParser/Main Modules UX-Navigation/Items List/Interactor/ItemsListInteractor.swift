@@ -18,8 +18,7 @@ class ItemsListInteractor {
 
 extension ItemsListInteractor: ItemsListInteractorInput {
     func prepareDataWithSavedUrl() {
-        //TODO: fetch data
-        output.dataReady(items: [])
+        output.dataReady(items: apiWorker.fetchRSSItems())
     }
     
     func prepareData(for rssUrl: URL) {
@@ -28,8 +27,7 @@ extension ItemsListInteractor: ItemsListInteractorInput {
         })        
     }
     
-    func idOfRSSItemAtIndex(index: UInt) -> Int32 {
-        //TODO: get id of rss item
-        return 0
+    func idOfRSSItemAtIndex(index: UInt) -> String {
+        return apiWorker.fetchRecordsAndGetGUID(index: Int(index))
     }
 }

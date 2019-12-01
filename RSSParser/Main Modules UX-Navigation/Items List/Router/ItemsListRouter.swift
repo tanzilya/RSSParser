@@ -9,7 +9,7 @@
 import Foundation
 
 class ItemsListRouter: ItemsListRouterInput {
-    func openRSSDetails(_ id: Int32) {
+    func openRSSDetails(_ id: String) {
         // TODO: Open details (use abstractions for view!)
     }
 }

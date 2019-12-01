@@ -80,6 +80,7 @@
                                             <outlet property="lblDate" destination="eFr-Pb-pd3" id="eLe-XU-bGV"/>
                                             <outlet property="lblDesc" destination="rAY-te-Q7u" id="N6x-pB-sb4"/>
                                             <outlet property="lblTitle" destination="EJ4-o3-bJo" id="EWu-NL-TRi"/>
+                                            <segue destination="o1P-ZU-cYS" kind="show" id="PPJ-od-HYY"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -169,8 +170,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Jjo-Z3-XLx"/>
                     </view>
+                    <navigationItem key="navigationItem" id="xOM-fV-BoU"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M2R-eR-HmP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <customObject id="VhG-Yp-vWv" customClass="ItemsDetailInitializer" customModule="RSSParser" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="1913.0434782608697" y="137.94642857142856"/>
         </scene>

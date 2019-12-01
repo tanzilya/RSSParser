@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @protocol RSSItemsDetailViewOutput;
+
 @interface NewsDetailViewController : UIViewController
 @property (nonatomic, strong) id output;
 @end

@@ -13,7 +13,7 @@ import Foundation
 protocol ItemsListInteractorInput {
     func prepareDataWithSavedUrl()
     func prepareData(for rssUrl: URL)
-    func idOfRSSItemAtIndex(index: UInt) -> Int32
+    func idOfRSSItemAtIndex(index: UInt) -> String
 }
 
 //MARK: - *** ItemsListInteractorOutput ***

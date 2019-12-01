@@ -8,6 +8,13 @@
 
 import UIKit
 
-class ItemsDetailInteractorProtocols: NSObject {
+//MARK: - *** ItemsDetailInteractorInput ***
 
+protocol ItemsDetailInteractorInput {
+}
+
+//MARK: - *** ItemsDetailInteractorOutput ***
+
+protocol ItemsDetailInteractorOutput: class {
+    func dataReady(item: NSManagedObject)
 }

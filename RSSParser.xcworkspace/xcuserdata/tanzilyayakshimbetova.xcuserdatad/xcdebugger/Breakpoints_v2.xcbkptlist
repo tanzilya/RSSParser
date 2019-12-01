@@ -7,22 +7,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "0F51F15A-EED0-4F4B-913E-8E222AA3EA67"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "RSSParser/Main Modules UX-Navigation/Items List/View/NewsListViewController.m"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "29"
-            endingLineNumber = "29"
-            landmarkName = "-prepareWith:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "862D1CEB-7AE2-4049-98E2-D2563A95E027"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
@@ -30,73 +14,41 @@
             filePath = "RSSParser/Main Modules UX-Navigation/Items List/Interactor/ItemsListInteractor.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "26"
-            endingLineNumber = "26"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
             landmarkName = "prepareData(for:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "862D1CEB-7AE2-4049-98E2-D2563A95E027 - 35ef6f63524c030f"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "RSSParser.ItemsListInteractor.prepareData(for: Foundation.URL) -&gt; ()"
-                  moduleName = "RSSParser"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/tanzilyayakshimbetova/Documents/Projects/RSSParser/RSSParser/Main%20Modules%20UX-Navigation/Items%20List/Interactor/ItemsListInteractor.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "26"
-                  endingLineNumber = "26"
-                  offsetFromSymbolStart = "34">
-               </Location>
-               <Location
-                  uuid = "862D1CEB-7AE2-4049-98E2-D2563A95E027 - c630c6c663c67ac3"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Array&lt;__C.RSSItemEntity&gt;) -&gt; () in RSSParser.ItemsListInteractor.prepareData(for: Foundation.URL) -&gt; ()"
-                  moduleName = "RSSParser"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/tanzilyayakshimbetova/Documents/Projects/RSSParser/RSSParser/Main%20Modules%20UX-Navigation/Items%20List/Interactor/ItemsListInteractor.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "27"
-                  endingLineNumber = "27"
-                  offsetFromSymbolStart = "87">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "BEF822EA-E596-44D0-9339-E4A5E7503C72"
+            uuid = "77AEBC63-2FA3-4149-B7BA-B276D21C57F1"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "RSSParser/Main Modules UX-Navigation/Items List/Interactor/ItemsListInteractor.swift"
+            filePath = "RSSParser/Services/NewsApi/NewsAPI.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "27"
-            endingLineNumber = "27"
-            landmarkName = "prepareData(for:)"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "saveRSSToDB(rss:completion:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "4646D8B5-2023-4377-B30A-BA4FCF09EC7C"
-            shouldBeEnabled = "No"
+            uuid = "863910E0-FBB7-4132-9D45-ACFBA45BCEED"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "RSSParser/Services/NewsAPI.swift"
+            filePath = "RSSParser/Services/NewsApi/NewsAPI.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "13"
-            endingLineNumber = "13"
-            landmarkName = "getNews(url:completion:)"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "saveRSSToDB(rss:completion:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

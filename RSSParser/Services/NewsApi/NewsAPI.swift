@@ -30,10 +30,9 @@ class NewsAPI: NewsAPIProtocols {
             record.setValue(rssItem.itemDescription , forKey: "itemDescription")
             record.setValue(rssItem.link , forKey: "link")
             record.setValue(rssItem.guid , forKey: "guid")
-            record.setValue(rssItem.categories , forKey: "categoties")
             record.setValue(rssItem.imagesFromContent , forKey: "imageUrl")
             record.setValue(rssItem.pubDate , forKey: "pubDate")
-            
+            // TODO: fixed bugs
             do {
                 try context.save()
             } catch {
@@ -55,7 +54,7 @@ class NewsAPI: NewsAPIProtocols {
             for data in result as! [NSManagedObject] {
                 let item: RSSItemEntity = RSSItemEntity.rssItem(with: data.value(forKey: "title") as! String,
                                                                 andRssDescription: data.value(forKey: "itemDescription") as! String,
-                                                                andImage: data.value(forKey: "imageUrl") as! String,
+                                                                andImage: (data.value(forKey: "imageUrl") ?? "") as! String,
                                                                 andDate: data.value(forKey: "pubDate") as! Date)
                 resultItems.append(item)
             }
@@ -63,5 +62,22 @@ class NewsAPI: NewsAPIProtocols {
             return ([])
         }
         return resultItems
+    }
+    
+    func fetchRecordsAndGetGUID(index: Int) -> String {
+        let appDelegate: AppDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appDelegate.persistentContainer.viewContext
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "NewsItem")
+        request.sortDescriptors = [NSSortDescriptor(key: "pubDate", ascending: true)]
+        request.returnsObjectsAsFaults = false
+        do {
+            let result: [NSManagedObject] = try context.fetch(request) as! [NSManagedObject]
+            if result.count > 0 {
+                return result[index].value(forKey: "guid") as! String
+            }
+        } catch {
+            return ""
+        }
+        return ""
     }
 }

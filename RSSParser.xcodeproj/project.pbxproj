@@ -41,6 +41,8 @@
 		BDCFA7E72393C14400D72772 /* NewsWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCFA7E62393C14400D72772 /* NewsWorker.swift */; };
 		BDCFA7F62393C8B700D72772 /* NewsItem+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = BDCFA7F32393C8B700D72772 /* NewsItem+CoreDataClass.m */; };
 		BDCFA7F72393C8B700D72772 /* NewsItem+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = BDCFA7F42393C8B700D72772 /* NewsItem+CoreDataProperties.m */; };
+		BDCFA7FB2393D83000D72772 /* AppLinkProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCFA7FA2393D83000D72772 /* AppLinkProtocols.swift */; };
+		BDCFA7FD2393D83D00D72772 /* AppLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCFA7FC2393D83D00D72772 /* AppLink.swift */; };
 		D45DB1F6448C930DC717E558 /* Pods_RSSParserTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB3E1993928699970E8E29F3 /* Pods_RSSParserTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -117,6 +119,8 @@
 		BDCFA7F32393C8B700D72772 /* NewsItem+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NewsItem+CoreDataClass.m"; sourceTree = "<group>"; };
 		BDCFA7F42393C8B700D72772 /* NewsItem+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NewsItem+CoreDataProperties.m"; sourceTree = "<group>"; };
 		BDCFA7F52393C8B700D72772 /* NewsItem+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NewsItem+CoreDataClass.h"; sourceTree = "<group>"; };
+		BDCFA7FA2393D83000D72772 /* AppLinkProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLinkProtocols.swift; sourceTree = "<group>"; };
+		BDCFA7FC2393D83D00D72772 /* AppLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLink.swift; sourceTree = "<group>"; };
 		EDDF50B1485486B564EABE6E /* Pods-RSSParserTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RSSParserTests.debug.xcconfig"; path = "Target Support Files/Pods-RSSParserTests/Pods-RSSParserTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -263,11 +267,11 @@
 		666C17CA238BA4AA00B02075 /* Items List */ = {
 			isa = PBXGroup;
 			children = (
-				666C17DC238BA89900B02075 /* Interactor */,
-				666C17D5238BA6D100B02075 /* Router */,
-				666C17C5238BA38500B02075 /* Initializer */,
-				666C17C4238BA38000B02075 /* Presenter */,
 				6617D923237E00BD000E8D6D /* Entity */,
+				666C17C5238BA38500B02075 /* Initializer */,
+				666C17DC238BA89900B02075 /* Interactor */,
+				666C17C4238BA38000B02075 /* Presenter */,
+				666C17D5238BA6D100B02075 /* Router */,
 				6617D922237E00B5000E8D6D /* View */,
 			);
 			path = "Items List";
@@ -376,9 +380,8 @@
 		BDCFA7DC2393BB5E00D72772 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				BDCFA7E22393BD4900D72772 /* NewsAPI.swift */,
-				BDCFA7E42393BD5A00D72772 /* NewsAPIProtocols.swift */,
-				BDCFA7E62393C14400D72772 /* NewsWorker.swift */,
+				BDCFA7F92393D81600D72772 /* NewsApi */,
+				BDCFA7F82393D80E00D72772 /* AppLink */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -393,6 +396,25 @@
 				6617D8F6237DEE4A000E8D6D /* RSSParser.xcdatamodeld */,
 			);
 			path = DB;
+			sourceTree = "<group>";
+		};
+		BDCFA7F82393D80E00D72772 /* AppLink */ = {
+			isa = PBXGroup;
+			children = (
+				BDCFA7FA2393D83000D72772 /* AppLinkProtocols.swift */,
+				BDCFA7FC2393D83D00D72772 /* AppLink.swift */,
+			);
+			path = AppLink;
+			sourceTree = "<group>";
+		};
+		BDCFA7F92393D81600D72772 /* NewsApi */ = {
+			isa = PBXGroup;
+			children = (
+				BDCFA7E22393BD4900D72772 /* NewsAPI.swift */,
+				BDCFA7E42393BD5A00D72772 /* NewsAPIProtocols.swift */,
+				BDCFA7E62393C14400D72772 /* NewsWorker.swift */,
+			);
+			path = NewsApi;
 			sourceTree = "<group>";
 		};
 		C62E6B68C8A84AE6B71C364C /* Frameworks */ = {
@@ -666,6 +688,7 @@
 				666C17DB238BA6FA00B02075 /* ItemsListRouterProtocols.swift in Sources */,
 				666C17E0238BA8B100B02075 /* ItemsListInteractorProtocols.swift in Sources */,
 				666C17D0238BA5EA00B02075 /* ItemsListPresenter.swift in Sources */,
+				BDCFA7FD2393D83D00D72772 /* AppLink.swift in Sources */,
 				666C17D7238BA6E200B02075 /* ItemsListRouter.swift in Sources */,
 				6617D8F2237DEE4A000E8D6D /* NewsListViewController.m in Sources */,
 				BDA0DCA7239399D4004C5233 /* ItemsDetailViewProtocols.swift in Sources */,
@@ -682,6 +705,7 @@
 				BDA0DCAB23939CD9004C5233 /* ItemsDetailInteractor.swift in Sources */,
 				666C17D4238BA63000B02075 /* ItemsListViewProtocols.swift in Sources */,
 				666C17DE238BA8A700B02075 /* ItemsListInteractor.swift in Sources */,
+				BDCFA7FB2393D83000D72772 /* AppLinkProtocols.swift in Sources */,
 				6617D8F8237DEE4A000E8D6D /* RSSParser.xcdatamodeld in Sources */,
 				666C17CE238BA4E300B02075 /* ItemsListInitializer.swift in Sources */,
 			);

@@ -12,7 +12,7 @@ import Foundation
 
 @objc(RSSItemsDetailViewInput)
 protocol ItemsDetailViewInput: NSObjectProtocol {
-    func prepare(with placesContent: [Any])
+    func prepare(with placesContent: Any)
 }
 
 //MARK: - *** NewsDetailViewOutput ***
@@ -20,5 +20,5 @@ protocol ItemsDetailViewInput: NSObjectProtocol {
 @objc(RSSItemsDetailViewOutput)
 protocol ItemsDetailViewOutput: NSObjectProtocol {
     func postViewDidLoad()
-    func didTapedOnOpenWebSite(_ url: URL)
+    func didTapedOnOpenWebSite(url: String)
 }

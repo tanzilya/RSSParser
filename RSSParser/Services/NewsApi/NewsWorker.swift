@@ -24,4 +24,12 @@ class NewsWorker: NSObject {
             }
         }
     }
+    
+    func fetchRSSItems() -> [RSSItemEntity] {
+        return newsApi.fetchRSSItems()
+    }
+    
+    func fetchRecordsAndGetGUID(index: Int) -> String {
+         return newsApi.fetchRecordsAndGetGUID(index: index)
+    }
 }

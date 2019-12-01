@@ -1,5 +1,5 @@
 //
-//  ItemsDetailRouterProtocols.swift
+//  AppLinkProtocols.swift
 //  RSSParser
 //
 //  Created by Tanzilya Yakshimbetova on 12/1/19.
@@ -8,6 +8,6 @@
 
 import UIKit
 
-protocol ItemsDetailRouterInput {
-    func didTapedOnOpenWebSite(url: String)
+protocol AppLinkProtocols {
+    func openLink(url: String)
 }

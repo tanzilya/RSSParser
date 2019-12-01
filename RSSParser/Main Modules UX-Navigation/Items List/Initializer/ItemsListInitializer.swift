@@ -35,9 +35,9 @@ private class ItemsListConfigurator: NSObject {
         
         let interactor = ItemsListInteractor()
         interactor.output = presenter
-        //TODO: add services (fetching and saving data). User abstraction!
         
         presenter.interactor = interactor
         viewController.output = presenter
+
     }
 }

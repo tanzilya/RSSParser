@@ -10,7 +10,7 @@
         <!--Items ListVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="NewsListViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -19,7 +19,7 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="141" id="5bd-WE-Khe">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="NewsListItemCell" rowHeight="141" id="5bd-WE-Khe" customClass="NewsListItemCell">
                                         <rect key="frame" x="0.0" y="28" width="414" height="141"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5bd-WE-Khe" id="git-UV-FBb">
@@ -75,8 +75,18 @@
                                                 <constraint firstItem="EJ4-o3-bJo" firstAttribute="top" secondItem="git-UV-FBb" secondAttribute="topMargin" constant="9" id="ugg-6M-RVI"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="imgImage" destination="ZXa-L5-Msq" id="Dpg-Kr-O9d"/>
+                                            <outlet property="lblDate" destination="eFr-Pb-pd3" id="eLe-XU-bGV"/>
+                                            <outlet property="lblDesc" destination="rAY-te-Q7u" id="N6x-pB-sb4"/>
+                                            <outlet property="lblTitle" destination="EJ4-o3-bJo" id="EWu-NL-TRi"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="ea9-eS-iQ0"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="sof-bg-mmO"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -89,12 +99,27 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="1Qg-U7-5Pd">
-                        <barButtonItem key="leftBarButtonItem" systemItem="trash" id="xB4-06-zSC"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="trash" id="Pcq-ST-I5V">
+                            <connections>
+                                <action selector="onTapDelete:" destination="BYZ-38-t0r" id="FQ0-v1-ELu"/>
+                            </connections>
+                        </barButtonItem>
                         <rightBarButtonItems>
-                            <barButtonItem systemItem="add" id="Z3t-K9-n8H"/>
-                            <barButtonItem systemItem="search" id="PWp-Tt-cde"/>
+                            <barButtonItem systemItem="add" id="ifq-2V-nQs">
+                                <connections>
+                                    <action selector="onTapAddRSS:" destination="BYZ-38-t0r" id="Cy2-DR-2db"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="search" id="uHN-qU-8Pf">
+                                <connections>
+                                    <action selector="onTapSearch:" destination="BYZ-38-t0r" id="mcM-tX-qG6"/>
+                                </connections>
+                            </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="3jE-D6-Mcg" id="udF-KE-1KF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <customObject id="Qo2-re-AmR" customClass="ItemsListInitializer" customModule="RSSParser" customModuleProvider="target">

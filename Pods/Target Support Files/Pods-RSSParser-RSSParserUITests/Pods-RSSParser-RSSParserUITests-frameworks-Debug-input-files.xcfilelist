@@ -1,0 +1,3 @@
+${PODS_ROOT}/Target Support Files/Pods-RSSParser-RSSParserUITests/Pods-RSSParser-RSSParserUITests-frameworks.sh
+${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework
+${BUILT_PRODUCTS_DIR}/AlamofireRSSParser/AlamofireRSSParser.framework

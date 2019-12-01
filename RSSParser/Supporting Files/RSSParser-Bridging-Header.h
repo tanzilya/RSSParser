@@ -5,3 +5,7 @@
 #import "NewsListViewController.h"
 #import "NewsDetailViewController.h"
 #import "RSSItemEntity.h"
+#import "NewsListItemCell.h"
+#import "AppDelegate.h"
+
+

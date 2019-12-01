@@ -11,6 +11,7 @@ import Foundation
 class ItemsListInteractor {
 //MARK: - Class Variables
     weak var output: ItemsListInteractorOutput!
+    var apiWorker: NewsWorker = NewsWorker(newsApi: NewsAPI())
 }
 
 //MARK: - *** ItemsListInteractorInput ***
@@ -22,8 +23,9 @@ extension ItemsListInteractor: ItemsListInteractorInput {
     }
     
     func prepareData(for rssUrl: URL) {
-        //TODO: fetch data
-        output.dataReady(items: [])
+        apiWorker.getListNews(url: rssUrl, completion: { (items) in
+            self.output.dataReady(items: items)
+        })        
     }
     
     func idOfRSSItemAtIndex(index: UInt) -> Int32 {

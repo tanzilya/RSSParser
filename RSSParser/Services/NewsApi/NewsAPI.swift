@@ -21,6 +21,7 @@ class NewsAPI: NewsAPIProtocols {
     }
     
     func saveRSSToDB(rss: RSSFeed, completion: @escaping ([RSSItemEntity]) -> Void) {
+        self.deletePreviousData()
         let appDelegate: AppDelegate = UIApplication.shared.delegate as! AppDelegate
         let context = appDelegate.persistentContainer.viewContext
         let entity = NSEntityDescription.entity(forEntityName: "NewsItem", in: context)
@@ -40,6 +41,19 @@ class NewsAPI: NewsAPIProtocols {
             }
         }
         completion(self.fetchRSSItems())
+    }
+    
+    func deletePreviousData() {
+        let appDelegate: AppDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appDelegate.persistentContainer.viewContext
+        let fetch = NSFetchRequest<NSFetchRequestResult>(entityName: "NewsItem")
+        let request = NSBatchDeleteRequest(fetchRequest: fetch)
+        do {
+            try context.execute(request)
+        }
+        catch {
+            debugPrint("error in emptying data base")
+        }
     }
     
     func fetchRSSItems() -> [RSSItemEntity] {

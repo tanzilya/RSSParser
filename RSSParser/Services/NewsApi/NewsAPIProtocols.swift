@@ -14,4 +14,5 @@ protocol NewsAPIProtocols {
     func saveRSSToDB(rss: RSSFeed, completion: @escaping ([RSSItemEntity]) -> Void)
     func fetchRSSItems() -> [RSSItemEntity]
     func fetchRecordsAndGetGUID(index: Int) -> String
+    func deletePreviousData()
 }
